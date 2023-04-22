@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .nav-item{
+        @apply mr-3 ml-3
+    }
+
+    .project-item{
+        @apply w-1/2 h-full mr-1 rounded-2xl
+    }
+}
