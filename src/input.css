@@ -4,10 +4,27 @@
 
 @layer components{
     .nav-item{
-        @apply mr-3 ml-3
+        @apply mx-3 hover:border-b-2
     }
 
     .project-item{
         @apply w-1/2 h-full mr-1 rounded-2xl
+    }
+
+    .full-project-item{
+        @apply w-1/2 h-full mr-1 rounded-2xl
+    }
+
+    .skill-option{
+        @apply w-32 h-32 m-4  rounded-xl border-2 bg-primaryDark border-black text-white text-center flex flex-col justify-center items-center shadow-gray-600 shadow-lg
+    }
+
+    .skill-option-2{
+
+        @apply w-32 h-32 m-4  rounded-xl border-2 bg-gray-100 border-black text-black text-center flex flex-col justify-center items-center shadow-gray-400 shadow-lg
+    }
+
+    .technologies-default{
+        @apply w-5 h-5 mx-1
     }
 }
