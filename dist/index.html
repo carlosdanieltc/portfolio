@@ -7,15 +7,20 @@
   <title>Carlos Tabares</title>
   <link rel="stylesheet" href="./output.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+  <script src="script.js" defer></script>
 </head>
 
 <body class="bg-gray-100">
   <!-- CABECERA -->
-  <header class="h-16 tracking-wider fixed w-full bg-zinc-800 md:bg-gray-100"> <!-- bg-gradient-to-r from-zinc-800 to-white -->
-    <div class="flex h-16 bg-gray-100 items-center justify-between">
-      <a href="#home" class="text-4xl text-white md:hidden bg-green-500 ml-3">CT</a>
-      <nav class="flex-1 text-lg mr-16 hidden md:block">
-        <ul class="flex items-center h-16 justify-end">
+  <header class="h-16 tracking-wider fixed w-full md:bg-gray-100 bg-zinc-800">
+    <!-- bg-gradient-to-r from-zinc-800 to-white -->
+    <div class="flex h-full justify-between md:justify-end items-center">
+      <a href="#home" class="text-4xl text-white md:hidden ml-3">CT</a>
+      <nav class="text-xl md:text-lg md:mr-16 h-auto flex flex-col justify-start absolute right-0 top-0 md:static">
+        <button id="menu-button" class="text-white text-4xl md:hidden mr-3 absolute right-0 top-2">
+          <i class="bi bi-list"></i>
+        </button>
+        <ul id="menu" class="md:flex items-center hidden w-72 md:w-auto px-10 py-20 md:p-0 h-screen md:h-auto bg-gray-100 md:bg-transparent">
           <li class="nav-item"><a href="#home">Home</a></li>
           <li class="nav-item"><a href="#skills">Skills</a></li>
           <li class="nav-item"><a href="#projects">Projects</a></li>
@@ -27,44 +32,49 @@
           </li>
         </ul>
       </nav>
-      <button class="text-white text-4xl md:hidden bg-red-600 mr-3">
-        <i class="bi bi-list"></i>
-      </button>
     </div>
   </header>
 
   <!-- HOME SECTION -->
-  <div id="home" class="h-screen flex md:flex-row flex-col">
-    <div class="md:w-1/2 md:rounded-borderCustom bg-zinc-800 flex flex-col items-center justify-center pr-12 md:z-50">
+  <div id="home" class="md:h-screen flex md:flex-row flex-col">
+    <div class="md:w-1/2 md:rounded-borderCustom bg-zinc-800 flex flex-col items-center justify-center md:pr-12 pt-16 md:pt-0 md:z-50">
       <p class="text-4xl mt-4 text-white md:ml-12 absolute top-0 left-0 hidden md:block">CT</p>
-      <img src="img/amumu2.jpg" class="bg-black md:rounded-full w-80 h-80 md:ml-auto">
+      <img src="img/amumu2.jpg" class="bg-black md:rounded-full md:w-80 md:h-80 w-64 h-64 md:ml-auto">
       <div class="text-4xl py-3 text-white md:absolute bottom-2 left-12">
         <a href="https://www.linkedin.com/in/tabaresin" target="_blank"><i class="bi bi-linkedin"></i></a>
         <a href="https://github.com/carlosdanieltc" target="_blank"><i class="bi bi-github"></i></a>
-        <!-- <a href=""><i class="bi bi-envelope" target="_blank"></i></a> -->
       </div>
     </div>
-    <div class="flex flex-col justify-center md:w-7/12 md:px-12 items-center md:items-start">
-      <h1 class="text-3xl md:text-5xl font-medium">CARLOS TABARES</h1>
-      <h2 class="text-2xl md:text-3xl mt-2 font-medium py-2">Frontend Developer</h2>
-      <p class="py-5 leading-7  text-gray-800 w-2/3">¡Hola! Soy Carlos, vivo en Vigo España y soy desarrollador de software. 
-        En 2022 terminé mi Ciclo Superior de DAM y ahora me enfoco en aprender y mejorar mis habilidades como FrontEnd-Developer, ya que es lo que más me apasiona.</p>
-      <a href="#contact" class="rounded-full bg-zinc-800 text-white leading-6 py-3 w-32 text-center hover:shadow-lg">Contáctame</a>
+    <div class="flex flex-col justify-center md:w-7/12 md:px-12 items-center md:items-start mb-10 md:mb-0">
+      <h1 class="text-3xl md:text-5xl font-medium mt-3 md:mt-0">CARLOS TABARES</h1>
+      <h2 class="text-2xl md:text-3xl md:mt-2 font-medium md:py-2">Frontend Developer</h2>
+      <p class="py-4 leading-7 text-gray-800 md:w-2/3 mx-4 md:mx-0 my-2 text-center md:text-start">¡Hola! Soy Carlos, vivo en Vigo España y soy desarrollador de
+        software.
+        En 2022 terminé mi Ciclo Superior de DAM y ahora me enfoco en aprender y mejorar mis habilidades como
+        FrontEnd-Developer, ya que es lo que más me apasiona.</p>
+      <a href="#contact"
+        class="rounded-full bg-zinc-800 text-white leading-6 py-3 w-32 text-center hover:shadow-lg mb-3">Contáctame</a>
       <h4 class="my-4 font-medium text-2xl">Últimos proyectos:</h4>
-      <div class="h-40 w-4/5 flex">
-        <div class="bg-white project-item flex"></div>
-        <div class="bg-white project-item flex"></div>
+      <div class="h-40 md:w-4/5 w-full flex px-1 md:px-0">
+        <div class="mx-1 md:ml-0">
+          <a href="https://github.com/carlosdanieltc/react-gif-expert-" target="_blank"><img
+            src="img/myProjects/GifApp.png" class="w-full md:h-48 h-36 rounded-xl" alt="GiffApp"></a>
+        </div>
+        <div class="mx-1 md:ml-1">
+          <a href="" target="_blank"><img
+            src="img/myProjects/TodoApp.png" class="w-full md:h-48 h-36 rounded-xl" alt="TodoList"></a>
+        </div>
       </div>
     </div>
   </div>
 
   <!-- SKILLS SECTION VERSION 1-->
-  <div id="skills" class="pt-28 pb-12">
-    <h1 class="text-4xl font-medium w-4/5 text-center border-b-2 mx-auto pb-6">Habilidades</h1>
-    <div class="p-1 flex h-5/6 px-16">
-      <div class="w-1/2  flex flex-col justify-start pt-10">
-        <h3 class="text-center text-3xl font-medium py-2 mb-5">Tecnologías</h3>
-        <ul class="flex flex-wrap justify-center items-center mr-6">
+  <div id="skills" class="md:pt-28 pb-12">
+    <h1 class="md:text-4xl text-3xl font-medium w-4/5 text-center border-b-2 mx-auto pb-2 md:pb-6 pt-16 md:pt-0">Habilidades</h1>
+    <div class="p-1 flex h-5/6 md:px-16 flex-col md:flex-row">
+      <div class="md:w-1/2 flex flex-col justify-start pt-6 md:pt-10">
+        <h3 class="text-center md:text-3xl text-2xl font-medium py-2 mb-5">Tecnologías</h3>
+        <ul class="flex flex-wrap justify-center items-center md:mr-6">
           <li class="skill-option">
             <img class="w-1/2 mb-2" src="img/technologies/react.png" alt="React">
             <h4>React</h4>
@@ -95,9 +105,9 @@
           </li>
         </ul>
       </div>
-      <div class="w-1/2 flex flex-col justify-start pt-10">
-        <h3 class="text-center text-3xl font-medium py-2 mb-5">Herramientas</h3>
-        <ul class="flex flex-wrap justify-center items-center ml-6">
+      <div class="md:w-1/2 flex flex-col justify-start pt-6 md:pt-10">
+        <h3 class="text-center md:text-3xl text-2xl font-medium py-2 mb-5">Herramientas</h3>
+        <ul class="flex flex-wrap justify-center items-center md:ml-6">
           <li class="skill-option">
             <img class="w-1/2 mb-2" src="img/abilities/Visual_Studio_Code.png" alt="Visual Studio">
             <h4>Visual Studio</h4>
@@ -128,14 +138,19 @@
   </div>
 
   <!-- PROJECTS SECTION -->
-  <div id="projects" class="flex flex-col py-28">
-    <h1 class="text-4xl font-medium w-4/5 text-center border-b-2 mx-auto pb-6">Mis proyectos realizados</h1>
-    <div class="w-full flex justify-center">
-      <div class="w-96 h-104 m-4 mt-16 rounded-xl border-2 border-black shadow-gray-400 shadow-lg">
+  <div id="projects" class="flex flex-col md:py-28 mb-16">
+    <h1 class="md:text-4xl text-3xl font-medium w-4/5 text-center border-b-2 mx-auto pb-2 md:pb-6 pt-16 md:pt-0">Mis proyectos realizados</h1>
+    <div class="w-full flex flex-col md:flex-row justify-center">
+      
+      <div class="md:w-96 h-104 mx-4 md:mt-16 mt-8 rounded-xl border-2 border-black shadow-gray-400 shadow-lg">
         <div class="w-full h-96 bg-primaryDark rounded-t-xl text-white">
-          <a href="https://github.com/carlosdanieltc/react-gif-expert-" target="_blank"><img src="img/myProjects/gifsapp.png" class="w-full h-44 rounded-t-xl" alt=""></a>
-          <h3 class="mx-6 mt-4 text-2xl">GifsApp</h3>
-          <p class="mx-6 mt-4">Proyecto realizado para la práctica de React, en el cuál conectamos con la API de Giphy y podemos realizar búsquedas de gifs de todo tipo. <a href="https://carlosdanieltc.github.io/react-gif-expert-/" target="_blank" class="text-blue-400 font-medium">Probar ahora</a></p>
+          <a href="https://github.com/carlosdanieltc/react-gif-expert-" target="_blank"><img
+              src="img/myProjects/GifApp.png" class="w-full h-48 rounded-t-xl" alt="GiffApp"></a>
+          <h3 class="mx-6 mt-4 md:text-2xl text-xl">GifsApp</h3>
+          <p class="mx-6 mt-4">Proyecto realizado para la práctica de React, en el cuál conectamos con la API de Giphy y
+            podemos realizar búsquedas de gifs de todo tipo. <a
+              href="https://carlosdanieltc.github.io/react-gif-expert-/" target="_blank"
+              class="text-blue-400 font-medium">Probar ahora</a></p>
         </div>
         <div class="w-full h-7 pl-2 pt-1 flex">
           <img src="img/technologies/react.png" alt="React" class="technologies-default">
@@ -145,11 +160,15 @@
           <img src="img/technologies/vite.png" alt="Vite" class="technologies-default">
         </div>
       </div>
-      <div class="w-96 h-104 m-4 mt-16 rounded-xl border-2 border-black shadow-gray-400 shadow-lg">
+      
+      <div class="md:w-96 h-104 mx-4 md:mt-16 mt-10 rounded-xl border-2 border-black shadow-gray-400 shadow-lg">
         <div class="w-full h-96 bg-primaryDark rounded-t-xl text-white">
-          <img src="img/myProjects/TodoList.png" class="w-full h-44 rounded-t-xl" alt="">
+          <img src="img/myProjects/TodoApp.png" class="w-full h-48 rounded-t-xl" alt="TodoList">
           <h3 class="mx-6 mt-4 text-2xl">ToDoList</h3>
-          <p class="mx-6 mt-4"></p>
+          <p class="mx-6 mt-4">Clásica TodoList realizada con React, donde además guardaremos los datos que hayamos introducido en el
+            LocalStorage. <a href=""
+            target="_blank" class="text-blue-400 font-medium">Probar ahora</a>
+          </p>
         </div>
         <div class="w-full h-7 pl-2 pt-1 flex">
           <img src="img/technologies/react.png" alt="React" class="technologies-default">
@@ -159,11 +178,15 @@
           <img src="img/technologies/vite.png" alt="Vite" class="technologies-default">
         </div>
       </div>
-      <div class="w-96 h-104 m-4 mt-16 rounded-xl border-2 border-black shadow-gray-400 shadow-lg">
+      
+      <div class="md:w-96 h-104 m-4 md:mt-16 mt-10 rounded-xl border-2 border-black shadow-gray-400 shadow-lg">
         <div class="w-full h-96 bg-primaryDark rounded-t-xl text-white">
-          <a href="https://github.com/carlosdanieltc/bbva-home" target="_blank"><img src="img/myProjects/bbva.png" class="w-full h-44 rounded-t-xl" alt=""></a>
+          <a href="https://github.com/carlosdanieltc/bbva-home" target="_blank"><img src="img/myProjects/bbva2.png"
+              class="w-full h-48 rounded-t-xl" alt=""></a>
           <h3 class="mx-6 mt-4 text-2xl">BBVA Home</h3>
-          <p class="mx-6 mt-4">Página web realizada para la práctica de LitElement en la que veremos un ejemplo de ventana de inicio de la página de bbva. <a href="https://carlosdanieltc.github.io/bbva-home/" target="_blank" class="text-blue-400 font-medium">Probar ahora</a></p>
+          <p class="mx-6 mt-4">Página web realizada para la práctica de LitElement en la que veremos un ejemplo de
+            ventana de inicio de la página de bbva. <a href="https://carlosdanieltc.github.io/bbva-home/"
+              target="_blank" class="text-blue-400 font-medium">Probar ahora</a></p>
         </div>
         <div class="w-full h-7 pl-2 pt-1 flex">
           <img src="img/technologies/Lit.png" alt="" class="w-4 h-5 mx-1">
@@ -173,26 +196,28 @@
         </div>
       </div>
     </div>
-    <p class="text-center">Puedes ver todos mis proyectos en mi perfil de <a
-        href="https://github.com/carlosdanieltc" target="_blank" class="text-blue-600 font-medium">GitHub</a>.</p>
+    <p class="text-center">Puedes ver todos mis proyectos en mi perfil de <a href="https://github.com/carlosdanieltc"
+        target="_blank" class="text-blue-600 font-medium">GitHub</a>.</p>
   </div>
 
   <!-- CONTACT SECTION -->
   <div id="contact" class="bg-zinc-800 text-white flex flex-col justify-center items-center py-28">
     <h1 class="text-4xl font-medium mb-8">Contacto</h1>
-    <p>Puedes contactarme enviándome un email o a través de mis redes sociales.</p>
+    <p class="text-center mx-4 mb-4 md:mb-0">Puedes contactarme enviándome un email o a través de mis redes sociales.</p>
     <p>Espero tu mensaje !</p>
     <div class="my-4 text-3xl">
       <a href="https://www.linkedin.com/in/tabaresin" target="_blank"><i class="bi bi-linkedin"></i></a>
       <a href="https://github.com/carlosdanieltc" target="_blank"><i class="bi bi-github"></i></a>
     </div>
-    <form id="form" method="post" class="flex flex-col bg-white w-1/2 rounded-xl p-5 text-black">
+    <form id="form" method="post" class="flex flex-col bg-white md:w-1/2 w-11/12 rounded-xl md:p-5 p-3 text-black">
       <input type="text" name="name" placeholder="Ingresa tu nombre" class="rounded-xl p-3 bg-gray-200">
       <input type="email" name="email" placeholder="Ingresa tu correo" class="rounded-xl p-3 my-3 bg-gray-200">
-      <textarea name="message" cols="30" rows="5" placeholder="Deja tu mensaje" class="rounded-xl p-3 bg-gray-200"></textarea>
+      <textarea name="message" cols="30" rows="5" placeholder="Deja tu mensaje"
+        class="rounded-xl p-3 bg-gray-200"></textarea>
 
-      <button type="submit" class="mt-4 bg-blue-500 py-3 px-8 text-white rounded-xl w-fit">Enviar</button>
+      <button type="submit" class="md:mt-4 mt-2 bg-blue-500 py-3 px-8 text-white rounded-xl w-fit">Enviar</button>
     </form>
   </div>
 
+</body>
 </html>
