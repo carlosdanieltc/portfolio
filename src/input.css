@@ -12,7 +12,7 @@
     }
 
     .skill-option{
-        @apply w-24 md:w-32 h-24 md:h-32 m-4  rounded-xl border-2 bg-primaryDark border-black text-white text-center flex flex-col justify-center items-center shadow-gray-600 shadow-lg
+        @apply p-1 w-24 md:w-32 h-24 md:h-32 m-4  rounded-xl border-2 bg-primaryDark border-black text-white text-center flex flex-col justify-center items-center shadow-gray-600 shadow-lg
     }
 
     .skill-option-2{
