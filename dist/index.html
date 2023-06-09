@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth dark">
 
 <head>
   <meta charset="utf-8">
@@ -10,7 +10,7 @@
   <script src="script.js" defer></script>
 </head>
 
-<body class="bg-gray-100">
+<body class="bg-gray-100 dark:bg-zinc-800">
   <!-- CABECERA -->
   <header class="h-16 tracking-wider fixed w-full md:bg-gray-100 bg-zinc-800">
     <!-- bg-gradient-to-r from-zinc-800 to-white -->
@@ -20,13 +20,13 @@
         <button id="menu-button" class="text-white text-4xl md:hidden mr-3 absolute right-0 top-2">
           <i class="bi bi-list"></i>
         </button>
-        <ul id="menu" class="md:flex items-center hidden w-72 md:w-auto px-10 py-20 md:p-0 h-screen md:h-auto bg-gray-100 md:bg-transparent">
+        <ul id="menu" class="md:flex items-center hidden w-72 md:w-auto px-10 py-20 md:p-0 h-screen md:h-auto bg-gray-100 md:bg-transparent transition duration-300">
           <li class="nav-item"><a href="#home">Home</a></li>
           <li class="nav-item"><a href="#skills">Skills</a></li>
           <li class="nav-item"><a href="#projects">Projects</a></li>
           <li class="nav-item"><a href="#contact">Contact</a></li>
           <li class="ml-3">
-            <button>
+            <button id="dark-mode-button">
               <i class="bi bi-moon-stars-fill"></i>
             </button>
           </li>
@@ -39,29 +39,29 @@
   <div id="home" class="md:h-screen flex md:flex-row flex-col">
     <div class="md:w-1/2 md:rounded-borderCustom bg-zinc-800 flex flex-col items-center justify-center md:pr-12 pt-16 md:pt-0 md:z-50">
       <p class="text-4xl mt-4 text-white md:ml-12 absolute top-0 left-0 hidden md:block">CT</p>
-      <img src="img/amumu2.jpg" class="bg-black md:rounded-full md:w-80 md:h-80 w-64 h-64 md:ml-auto">
+      <img src="img/Carlos6.jpg" class="bg-black md:rounded-full md:w-80 md:h-80 w-64 h-64 md:ml-auto">
       <div class="text-4xl py-3 text-white md:absolute bottom-2 left-12">
         <a href="https://www.linkedin.com/in/tabaresin" target="_blank"><i class="bi bi-linkedin"></i></a>
         <a href="https://github.com/carlosdanieltc" target="_blank"><i class="bi bi-github"></i></a>
       </div>
     </div>
     <div class="flex flex-col justify-center md:w-7/12 md:px-12 items-center md:items-start mb-10 md:mb-0">
-      <h1 class="text-3xl md:text-5xl font-medium mt-3 md:mt-0">CARLOS TABARES</h1>
-      <h2 class="text-2xl md:text-3xl md:mt-2 font-medium md:py-2">Frontend Developer</h2>
-      <p class="py-4 leading-7 text-gray-800 md:w-2/3 mx-4 md:mx-0 my-2 text-center md:text-start">¡Hola! Soy Carlos, vivo en Vigo España y soy desarrollador de
+      <h1 class="text-3xl md:text-5xl font-medium mt-6">CARLOS TABARES</h1>
+      <h2 class="text-2xl md:text-3xl md:mt-2 font-medium md:py-3">Frontend Developer</h2>
+      <p class="py-4 leading-7 text-gray-800 md:w-2/3 mx-4 md:mx-0 my-3 md:my-2 text-center md:text-start">¡Hola! Soy Carlos, vivo en Vigo, España y soy desarrollador de
         software.
         En 2022 terminé mi Ciclo Superior de DAM y ahora me enfoco en aprender y mejorar mis habilidades como
         FrontEnd-Developer, ya que es lo que más me apasiona.</p>
       <a href="#contact"
         class="rounded-full bg-zinc-800 text-white leading-6 py-3 w-32 text-center hover:shadow-lg mb-3">Contáctame</a>
       <h4 class="my-4 font-medium text-2xl">Últimos proyectos:</h4>
-      <div class="h-40 md:w-4/5 w-full flex px-1 md:px-0">
+      <div class="h-40 md:w-4/5 w-full flex px-1 md:px-0 justify-center">
         <div class="mx-1 md:ml-0">
           <a href="https://github.com/carlosdanieltc/react-gif-expert-" target="_blank"><img
             src="img/myProjects/GifApp.png" class="w-full md:h-48 h-32 rounded-xl" alt="GiffApp"></a>
         </div>
         <div class="mx-1 md:ml-1">
-          <a href="" target="_blank"><img
+          <a href="https://github.com/carlosdanieltc/todoList" target="_blank"><img
             src="img/myProjects/TodoApp.png" class="w-full md:h-48 h-32 rounded-xl" alt="TodoList"></a>
         </div>
       </div>
@@ -84,6 +84,10 @@
             <h4>JavaScript</h4>
           </li>
           <li class="skill-option">
+            <img class="w-1/2 mb-2" src="img/technologies/Typescript.png" alt="TypeScript">
+            <h4>TypeScript</h4>
+          </li>
+          <li class="skill-option">
             <img class="w-1/2 mb-2" src="img/technologies/html.png" alt="HTML">
             <h4>HTML</h4>
           </li>
@@ -94,6 +98,10 @@
           <li class="skill-option">
             <img class="w-1/2 mb-2" src="img/technologies/Tailwind.png" alt="Tailwind">
             <h4>Tailwind</h4>
+          </li>
+          <li class="skill-option">
+            <img class="w-1/2 mb-2" src="img/technologies/sass.png" alt="Sass">
+            <h4 class="mt-2">Sass</h4>
           </li>
           <li class="skill-option">
             <img class="w-1/2 mb-2" src="img/technologies/java.png" alt="Java">
@@ -127,6 +135,10 @@
           <li class="skill-option">
             <img class="w-1/2 mb-2" src="img/abilities/postmanwebp.webp" alt="Postman">
             <h4>Postman</h4>
+          </li>
+          <li class="skill-option">
+            <img class="w-1/2 mb-2" src="img/abilities/Bootstrap.png" alt="Bootstrap">
+            <h4>Bootstrap</h4>
           </li>
           <li class="skill-option">
             <img class="w-1/2 mb-2" src="img/abilities/Agile.png" alt="Agile">
@@ -163,9 +175,9 @@
       
       <div class="md:w-96 h-104 mx-5 md:mt-16 mt-10 rounded-xl border-2 border-black shadow-gray-400 shadow-lg">
         <div class="w-full h-96 bg-primaryDark rounded-t-xl text-white">
-          <img src="img/myProjects/TodoApp.png" class="w-full h-48 rounded-t-xl" alt="TodoList">
+          <a href="https://github.com/carlosdanieltc/todoList" target="_blank"><img src="img/myProjects/TodoApp.png" class="w-full h-48 rounded-t-xl" alt="TodoList"></a>
           <h3 class="mx-6 mt-4 text-2xl">ToDoList</h3>
-          <p class="mx-6 mt-4">Clásica TodoList realizada con React, donde además guardaremos en el LocalStorage los datos que hayamos introducido. <a href=""
+          <p class="mx-6 mt-4">Clásica TodoList realizada con React, donde además guardaremos en el LocalStorage los datos que hayamos introducido. <a href="https://carlosdanieltc.github.io/todoList/"
             target="_blank" class="text-blue-400 font-medium">Probar ahora</a>
           </p>
         </div>
@@ -184,7 +196,7 @@
               class="w-full h-48 rounded-t-xl" alt=""></a>
           <h3 class="mx-6 mt-4 text-2xl">BBVA Home</h3>
           <p class="mx-6 mt-4">Página web realizada para la práctica de LitElement en la que veremos un ejemplo de
-            ventana de inicio de la página de bbva. <a href="https://carlosdanieltc.github.io/bbva-home/"
+            ventana de inicio de bbva. <a href="https://carlosdanieltc.github.io/bbva-home/"
               target="_blank" class="text-blue-400 font-medium">Probar ahora</a></p>
         </div>
         <div class="w-full h-7 pl-2 pt-1 flex">
@@ -200,7 +212,7 @@
   </div>
 
   <!-- CONTACT SECTION -->
-  <div id="contact" class="bg-zinc-800 text-white flex flex-col justify-center items-center py-28">
+  <!-- <div id="contact" class="bg-zinc-800 text-white flex flex-col justify-center items-center pt-28 pb-20">
     <h1 class="text-4xl font-medium mb-8">Contacto</h1>
     <p class="text-center mx-4 mb-4 md:mb-0">Puedes contactarme enviándome un email o a través de mis redes sociales.</p>
     <p>Espero tu mensaje !</p>
@@ -216,6 +228,16 @@
 
       <button type="submit" class="md:mt-4 mt-2 bg-blue-500 py-3 px-8 text-white rounded-xl w-fit">Enviar</button>
     </form>
+  </div> -->
+
+  <div id="contact" class="bg-zinc-800 text-white flex flex-col justify-center items-center pt-28 pb-20">
+    <h1 class="text-4xl font-medium mb-8">Contacto</h1>
+    <p class="text-center mx-4 mb-4 md:mb-0">Puedes contactarme enviándome un email a <b>carlosdanieltc@gmail.com</b> o a través de mis redes sociales.</p>
+    <p>Espero tu mensaje !</p>
+    <div class="my-4 text-3xl">
+      <a href="https://www.linkedin.com/in/tabaresin" target="_blank"><i class="bi bi-linkedin"></i></a>
+      <a href="https://github.com/carlosdanieltc" target="_blank"><i class="bi bi-github"></i></a>
+    </div> 
   </div>
 
 </body>
